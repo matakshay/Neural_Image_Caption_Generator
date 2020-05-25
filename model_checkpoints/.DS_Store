@@ -1,7 +1,0 @@
-Unstaged changes after reset:
-D	.DS_Store
-D	data/.DS_Store
-D	data/model_weights.h5
-D	data/textFiles/.DS_Store
-M	model_checkpoints/.DS_Store
-D	model_weights/.DS_Store
