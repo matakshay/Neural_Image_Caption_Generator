@@ -13,6 +13,59 @@ In 2012 the Google <a href="http://www.image-net.org/">ImageNet</a> Challenge (I
 For generating the captions, we make use of Long Short-Term Memory (LSTM) networks. LSTMs are a variant of Recurrent Neural Networks which are widely used in Natural Language Processing. Unlike a Dense layer, an RNN layer does not process an input in one go. Instead, it processes a sequence element-by-element, at each step incorporating new data with the information processed so far. This property of an RNN makes it a natural yet powerful architecture for processing sequential inputs.
 </p>
 
+<h2 id="dataset"> Dataset </h2>
+<p align="justify">
+This project uses the <a href="https://www.ijcai.org/Proceedings/15/Papers/593.pdf">Flickr 8K</a> dataset for training the model. This can be downloaded from <a href="https://www.kaggle.com/shadabhussain/flickr8k?select=model_weights.h5"> here</a>. It contains 8000 images, most of them featuring people and animals in a state of action. Each image is provided with five different captions describing the entities and events depicted in the image. Different captions of the same image tend to focus on different aspects of the scene, or use different linguistic constructions. This ensures that there is enough linguistic variety in the description of the images.
+<br>
+Some sample examples of images from the dataset, and their captions are given below-
+</p>
+
+<figure>
+    <div align="center">
+    <img src="examples/img1.jpg"
+         alt="Image 1"
+         width=500>
+    <figcaption>
+        <ul>
+        <li> A brightly decorated bicycle with cart with people walking around in the background. </li>
+        <li> A street vending machine is parked while people walk by. </li>
+        <li> A street vendor on the corner of a busy intersection. </li>
+        <li> People on the city street walk past a puppet theater. </li>
+        <li> People walk around a mobile puppet theater in a big city. </li>
+        </ul>
+    </figcaption>
+</figure>
+<br>
+<figure>
+    <img src="examples/img2.jpg"
+         alt="Image 2"
+         width=500>
+    <figcaption>
+        <ul>
+		<li> A blonde horse and a blonde girl in a black sweatshirt are staring at a fire in a barrel. </li>
+		<li> A girl and her horse stand by a fire. </li>
+		<li> A girl holding a horse's lead behind a fire. </li>
+		<li> A man, and girl and two horses are near a contained fire. </li>
+		<li> Two people and two horses watching a fire. </li>
+        </ul>
+    </figcaption>
+</figure>
+<br>
+<figure>
+    <img src="examples/img3.jpg"
+         alt="Image 3"
+         width=500>
+    <figcaption>
+        <ul>
+		<li> Children sit and watch the fish moving in the pond. </li>
+		<li> People stare at the orange fish. </li>
+		<li> Several people are standing near a fish pond. </li>
+		<li> Some children watching fish in a pool. </li>
+		<li> There are several people and children looking into water with a blue tiled floor and goldfish. </li>
+        </ul>
+    </figcaption>
+</figure>
+
 <h2 id="model"> Model </h2>
 
 <p align="justify">
