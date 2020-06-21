@@ -20,8 +20,13 @@ This project uses the <a href="https://www.ijcai.org/Proceedings/15/Papers/593.p
 Some sample examples of images from the dataset, and their captions are given below-
 </p>
 
+<<<<<<< HEAD
 <div align="center">
 <figure>
+=======
+<figure>
+    <div align="center">
+>>>>>>> 25af0e6c67cb8988621178e62c9c465f78ae210f
     <img src="examples/img1.jpg"
          alt="Image 1"
          width=500>
@@ -65,7 +70,10 @@ Some sample examples of images from the dataset, and their captions are given be
         </ul>
     </figcaption>
 </figure>
+<<<<<<< HEAD
 </div>
+=======
+>>>>>>> 25af0e6c67cb8988621178e62c9c465f78ae210f
 
 <h2 id="model"> Model </h2>
 
