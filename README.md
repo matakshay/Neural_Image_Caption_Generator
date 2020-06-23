@@ -89,6 +89,33 @@ ResNet50 which is used in this project is a smaller version of the original ResN
     The neural network for generating the captions has been built using the Keras Functional API. The features vectors (obtained form the ResNet50 network) are processed and combined with the caption data (which after converting into Embeddings, have been passed through an LSTM layer). This combined information is passed through a Dense layer followed by a Softmax layer (over the vocabulary words). The model was trained for 20 epochs, and at the end of each epoch, the model was saved in the "/model_checkpoints" directory. This process took about half an hour.
 </p>
 
+<h2 id="usage">Usage</h2>
+<p align="justify">On the terminal run the following commands-</p>
+    <ol>
+        <li>
+            Install all dependencies
+            <br>
+            <code> pip install python3 </code>
+            <br>
+            <code> pip install numpy </code>
+            <br>
+            <code> pip install matplotlib </code>
+            <br>
+            <code> pip install pickle-mixin </code>
+            <br>
+            <code> pip install tensorflow </code>
+            <br>
+            <code> pip install keras </code>
+        </li>
+        <li>
+            Clone this repository on your system and head over to it
+            <br>
+              <code> git clone https://github.com/matakshay/Neural_Image_Caption_Generator </code>
+            <br>
+            <code size> cd Neural_Image_Caption_Generator </code>
+        </li>
+    </ol>
+
 <h2 id="acknowledgement">Acknowledgement</h2>
 <p align="justify">
     I referred many articles & research papers while working on this project. Some of them are listed below-
