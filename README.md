@@ -20,7 +20,6 @@ This project uses the <a href="https://www.ijcai.org/Proceedings/15/Papers/593.p
 Some sample examples of images from the dataset, and their captions are given below-
 </p>
 
-<div align="center">
 <figure>
     <img src="examples/img1.jpg"
          alt="Image 1"
@@ -42,11 +41,11 @@ Some sample examples of images from the dataset, and their captions are given be
          width=500>
     <figcaption>
         <ul>
-		<li> A blonde horse and a blonde girl in a black sweatshirt are staring at a fire in a barrel. </li>
-		<li> A girl and her horse stand by a fire. </li>
-		<li> A girl holding a horse's lead behind a fire. </li>
-		<li> A man, and girl and two horses are near a contained fire. </li>
-		<li> Two people and two horses watching a fire. </li>
+	<li> A blonde horse and a blonde girl in a black sweatshirt are staring at a fire in a barrel. </li>
+	<li> A girl and her horse stand by a fire. </li>
+	<li> A girl holding a horse's lead behind a fire. </li>
+	<li> A man, and girl and two horses are near a contained fire. </li>
+	<li> Two people and two horses watching a fire. </li>
         </ul>
     </figcaption>
 </figure>
@@ -56,16 +55,15 @@ Some sample examples of images from the dataset, and their captions are given be
          alt="Image 3"
          width=500>
     <figcaption>
-        <ul>
-		<li> Children sit and watch the fish moving in the pond. </li>
-		<li> People stare at the orange fish. </li>
-		<li> Several people are standing near a fish pond. </li>
-		<li> Some children watching fish in a pool. </li>
-		<li> There are several people and children looking into water with a blue tiled floor and goldfish. </li>
+	<ul>
+	<li> Children sit and watch the fish moving in the pond. </li>
+	<li> People stare at the orange fish. </li>
+	<li> Several people are standing near a fish pond. </li>
+	<li> Some children watching fish in a pool. </li>
+	<li> There are several people and children looking into water with a blue tiled floor and goldfish. </li>
         </ul>
     </figcaption>
 </figure>
-</div>
 
 <h2 id="model"> Model </h2>
 
@@ -88,6 +86,16 @@ ResNet50 which is used in this project is a smaller version of the original ResN
 <a href="https://nlp.stanford.edu/projects/glove/">GloVe</a> vectors were used for creating the word embeddings for the captions. The version used in this project contains 50-dimensional embedding vectors for 6 Billion English words. It can be downloaded from <a href="https://www.kaggle.com/watts2/glove6b50dtxt"> here</a>. These Embeddings are not processed (fine-tuned using the current data) further during training time. <br>
     The neural network for generating the captions has been built using the Keras Functional API. The features vectors (obtained form the ResNet50 network) are processed and combined with the caption data (which after converting into Embeddings, have been passed through an LSTM layer). This combined information is passed through a Dense layer followed by a Softmax layer (over the vocabulary words). The model was trained for 20 epochs, and at the end of each epoch, the model was saved in the "/model_checkpoints" directory. This process took about half an hour.
 </p>
+
+<h2 id="frameworks">Frameworks, Libraries & Languages</h2>
+<ul>
+    <li> Keras </li>
+    <li> Tensorflow </li>
+    <li> Python3 </li>
+    <li> Numpy </li>
+    <li> Matplotlib </li>
+    <li> pickle-mixin </li>
+</ul>
 
 <h2 id="usage">Usage</h2>
 <p align="justify">On the terminal run the following commands-</p>
