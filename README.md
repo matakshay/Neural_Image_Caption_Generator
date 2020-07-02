@@ -87,6 +87,47 @@ ResNet50 which is used in this project is a smaller version of the original ResN
     The neural network for generating the captions has been built using the Keras Functional API. The features vectors (obtained form the ResNet50 network) are processed and combined with the caption data (which after converting into Embeddings, have been passed through an LSTM layer). This combined information is passed through a Dense layer followed by a Softmax layer (over the vocabulary words). The model was trained for 20 epochs, and at the end of each epoch, the model was saved in the "/model_checkpoints" directory. This process took about half an hour.
 </p>
 
+<h2 id="examples"> Examples </h2>
+<p align="justify">
+The trained model was used to generate caption for images from the test dataset. A few chosen examples from this are given below.
+<figure>
+    <img src="examples/eg1.jpg"
+         alt="First example"
+         width=350>
+	<figcaption> <p align="justify">A dog jumps over a red and white obstacle </p></figcaption>
+</figure>
+<figure>
+    <img src="examples/eg5.jpg"
+         alt="Fifth example"
+         width=350>
+	<figcaption> <p align="justify"> A tennis player hitting the ball </p> </figcaption>
+</figure>
+<figure>
+    <img src="examples/eg2.jpg"
+         alt="Second example"
+         width=350>
+	<figcaption> <p align="justify"> A man on a bike is jumping off a rocky ledge </p> </figcaption>
+</figure>
+<figure>
+    <img src="examples/eg3.jpg"
+         alt="Third example"
+         width=350>
+	<figcaption> <p align="justify"> A white dog running through the snow </p> </figcaption>
+</figure>
+<figure>
+    <img src="examples/eg4.jpg"
+         alt="Fourth example"
+         width=350>
+	<figcaption> <p align="justify"> A skateboarder is performing a trick on a railing </p> </figcaption>
+</figure>
+<figure>
+    <img src="examples/eg6.jpg"
+         alt="Sixth example"
+         width=350>
+	<figcaption> <p align="justify"> A dog is jumping into a pond </p> </figcaption>
+</figure>
+</p>
+
 <h2 id="frameworks">Frameworks, Libraries & Languages</h2>
 <ul>
     <li> Keras </li>
