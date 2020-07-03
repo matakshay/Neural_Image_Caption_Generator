@@ -4,6 +4,17 @@
 This is a Deep Learning Model for generating captions for images. It uses techniques from Computer Vision and Natural Language Processing.
 </p>
 
+<h3> TABLE OF CONTENTS </h3>
+<ol type="I">
+    <li><a href="#intro"> Introduction </a></li>
+    <li><a href="#dataset"> Dataset </a></li>
+    <li><a href="#model"> Model </a> </li>
+    <li><a href="#examples"> Examples </a></li>
+    <li><a href="#frameworks"> Frameworks, Libraries & Languages </a></li>
+    <li><a href="#usage"> Usage </a></li>
+    <li><a href="#acknowledgement"> Acknowledgement </a></li>
+</ol>
+
 <h2 id="intro"> Introduction </h2>
 <p align="justify">
 Deep Learning and Neural Networks have found profound applications in both NLP and Computer Vision. Before the Deep Learning era, statistical and Machine Learning techniques were commonly used for these tasks, especially in NLP. Neural Networks however have now proven to be powerful techniques, especially for more complex tasks. With the increase in size of available datasets and efficient computational tools, Deep Learning is being throughly researched on and applied in an increasing number of areas.
