@@ -11,33 +11,16 @@ from keras.applications.resnet50 import ResNet50, preprocess_input, decode_predi
 from keras.models import Model
 
 
-# Read the file tokens_clean.txt and store the cleaned captions in a dictionary
-content = None
-with open ("data/textFiles/tokens_clean.txt", 'r') as file:
-    content = file.read()
 
-json_acceptable_string = content.replace("'", "\"")
-content = json.loads(json_acceptable_string)
+# Read the files word_to_idx.pkl and idx_to_word.pkl to get the mappings between word and index
+word_to_index = {}
+with open ("data/textFiles/word_to_idx.pkl", 'rb') as file:
+    word_to_index = pd.read_pickle(file)
 
+index_to_word = {}
+with open ("data/textFiles/idx_to_word.pkl", 'rb') as file:
+    index_to_word = pd.read_pickle(file)
 
-total_words = []
-for key in content.keys():
-    for caption in content[key]:
-        for i in caption.split():
-            total_words.append(i)
-
-
-# Compute the frequency of occurrence of each word
-counter = collections.Counter(total_words)
-freq_cnt = dict(counter)
-
-# Sort the dictionary according to frequency of occurrence
-sorted_freq_cnt = sorted(freq_cnt.items(), reverse=True, key=lambda x:x[1])
-
-#Filter off those words which occur less than the threshold
-threshold = 5
-sorted_freq_cnt = [x for x in sorted_freq_cnt if x[1]>threshold]
-total_words = [x[0] for x in sorted_freq_cnt]
 
 
 print("Loading the model...")
@@ -46,22 +29,6 @@ model = load_model('model_checkpoints/model_19.h5')
 resnet50_model = ResNet50 (weights = 'imagenet', input_shape = (224, 224, 3))
 resnet50_model = Model (resnet50_model.input, resnet50_model.layers[-2].output)
 
-
-
-# Create the word-to-index and index-to-word mappings
-word_to_index = {}
-index_to_word = {}
-
-for i, word in enumerate(total_words):
-    word_to_index[word] = i+1
-    index_to_word[i+1] = word
-
-# Add startseq and endseq also to the mappings
-index_to_word[2645] = 'startseq'
-word_to_index['startseq'] = 2645
-
-index_to_word[2646] = 'endseq'
-word_to_index['endseq'] = 2646
 
 
 # Generate Captions for a random image in test dataset
@@ -114,6 +81,7 @@ def encode_image (img):
 print("Encoding the image ...")
 img_name = "input.jpg"
 photo = encode_image(img_name).reshape((1, 2048))
+
 
 
 print("Running model to generate the caption...")
