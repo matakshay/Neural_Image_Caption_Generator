@@ -45,50 +45,11 @@ This project uses the <a href="https://www.ijcai.org/Proceedings/15/Papers/593.p
 Some sample examples of images from the dataset, and their captions are given below-
 </p>
 
-<figure>
-    <img src="examples/img1.jpg"
-         alt="Image 1"
-         width=500>
-    <figcaption>
-        <ul>
-        <li> A brightly decorated bicycle with cart with people walking around in the background. </li>
-        <li> A street vending machine is parked while people walk by. </li>
-        <li> A street vendor on the corner of a busy intersection. </li>
-        <li> People on the city street walk past a puppet theatre. </li>
-        <li> People walk around a mobile puppet theatre in a big city. </li>
-        </ul>
-    </figcaption>
-</figure>
-<br>
-<figure>
-    <img src="examples/img2.jpg"
-         alt="Image 2"
-         width=500>
-    <figcaption>
-        <ul>
-	<li> A blonde horse and a blonde girl in a black sweatshirt are staring at a fire in a barrel. </li>
-	<li> A girl and her horse stand by a fire. </li>
-	<li> A girl holding a horse's lead behind a fire. </li>
-	<li> A man, and girl and two horses are near a contained fire. </li>
-	<li> Two people and two horses watching a fire. </li>
-        </ul>
-    </figcaption>
-</figure>
-<br>
-<figure>
-    <img src="examples/img3.jpg"
-         alt="Image 3"
-         width=500>
-    <figcaption>
-	<ul>
-	<li> Children sit and watch the fish moving in the pond. </li>
-	<li> People stare at the orange fish. </li>
-	<li> Several people are standing near a fish pond. </li>
-	<li> Some children watching fish in a pool. </li>
-	<li> There are several people and children looking into water with a blue tiled floor and goldfish. </li>
-        </ul>
-    </figcaption>
-</figure>
+<p align="center">
+<img alt="Dataset demo"
+     src="demo/demo2.gif"
+     height=500>
+</p>
 
 <h2 id="model"> Model </h2>
 
